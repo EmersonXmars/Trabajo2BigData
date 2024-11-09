@@ -1,0 +1,131 @@
+Ubicación,Tamaño_m2,Habitaciones,Estado,Características_Especiales,Precio_Venta
+Periferia,277,3,Nuevo,Balcón,139188
+Periferia,191,1,Renovado,Balcón,92682
+Periferia,116,4,Nuevo,Jardín,113831
+Suburbio,104,2,Renovado,Jardín,451151
+Suburbio,55,1,Renovado,Piscina,114353
+Suburbio,91,1,Usado,Jardín,316860
+Periferia,155,2,Renovado,Piscina,470740
+Periferia,265,2,Renovado,Piscina,494792
+Suburbio,188,2,Usado,Piscina,429656
+Suburbio,218,1,Nuevo,Jardín,171480
+Suburbio,291,2,Nuevo,Balcón,277264
+Centro,191,1,Nuevo,Jardín,115227
+Periferia,62,4,Usado,Jardín,210658
+Periferia,92,1,Renovado,Garaje,277670
+Periferia,284,3,Usado,Garaje,281787
+Periferia,59,5,Renovado,Balcón,203770
+Periferia,52,2,Renovado,Garaje,98422
+Centro,128,1,Nuevo,Balcón,461531
+Suburbio,168,5,Nuevo,Garaje,220228
+Periferia,140,3,Renovado,Garaje,304781
+Centro,255,4,Nuevo,Garaje,254835
+Periferia,130,3,Usado,Balcón,441896
+Centro,213,3,Usado,Piscina,124896
+Centro,99,1,Nuevo,Balcón,111295
+Periferia,153,3,Usado,Jardín,259686
+Periferia,181,1,Usado,Jardín,402833
+Centro,51,2,Nuevo,Garaje,313255
+Suburbio,183,3,Nuevo,Jardín,339648
+Centro,103,2,Usado,Piscina,172874
+Centro,155,1,Usado,Balcón,48155
+Centro,53,4,Usado,Garaje,341528
+Centro,103,3,Renovado,Balcón,414705
+Periferia,270,1,Renovado,Balcón,87254
+Centro,240,4,Renovado,Piscina,324062
+Suburbio,195,4,Nuevo,Jardín,125981
+Periferia,267,2,Renovado,Jardín,493929
+Suburbio,93,1,Nuevo,Balcón,70306
+Suburbio,211,4,Nuevo,Garaje,187718
+Suburbio,251,3,Renovado,Jardín,348987
+Suburbio,239,3,Renovado,Garaje,160975
+Periferia,277,2,Renovado,Jardín,398745
+Periferia,63,4,Usado,Garaje,147512
+Suburbio,144,1,Renovado,Piscina,187443
+Suburbio,97,3,Usado,Garaje,413616
+Periferia,64,4,Nuevo,Piscina,173121
+Periferia,249,4,Usado,Piscina,202688
+Periferia,255,2,Renovado,Garaje,405871
+Centro,264,3,Nuevo,Piscina,415037
+Centro,298,3,Nuevo,Balcón,323076
+Centro,239,1,Nuevo,Piscina,157796
+Suburbio,89,3,Usado,Jardín,331999
+Centro,262,1,Renovado,Garaje,232506
+Suburbio,257,3,Nuevo,Balcón,214088
+Suburbio,286,2,Nuevo,Garaje,309544
+Centro,131,3,Nuevo,Jardín,420002
+Suburbio,160,1,Usado,Jardín,213714
+Centro,102,1,Usado,Jardín,55151
+Centro,73,2,Renovado,Piscina,484623
+Periferia,203,3,Usado,Piscina,106690
+Centro,266,3,Nuevo,Garaje,44499
+Periferia,237,2,Renovado,Garaje,46295
+Centro,173,3,Nuevo,Balcón,423029
+Centro,286,3,Nuevo,Balcón,428215
+Periferia,90,1,Usado,Garaje,361184
+Periferia,206,3,Renovado,Piscina,314327
+Centro,64,3,Usado,Jardín,462515
+Suburbio,94,2,Usado,Garaje,183946
+Periferia,114,2,Renovado,Balcón,418480
+Suburbio,138,4,Nuevo,Piscina,72711
+Suburbio,120,1,Nuevo,Garaje,307683
+Suburbio,58,3,Renovado,Garaje,224423
+Periferia,137,3,Nuevo,Piscina,494483
+Suburbio,178,4,Renovado,Garaje,219426
+Periferia,285,3,Renovado,Piscina,428207
+Suburbio,185,1,Usado,Jardín,173629
+Centro,265,4,Renovado,Piscina,340504
+Centro,112,1,Usado,Piscina,253090
+Periferia,188,4,Nuevo,Piscina,173272
+Centro,292,4,Nuevo,Garaje,283548
+Centro,130,2,Nuevo,Garaje,218047
+Costa,262,4,Renovado,Garaje,197164
+Costa,209,1,Usado,Jardín,51338
+Montaña,264,4,Usado,Terraza,171484
+Centro Histórico,210,4,Usado,Garaje,47543
+Rural,116,2,Nuevo,Garaje,408035
+Isla,177,4,Renovado,Vista al Mar,466712
+Rural,67,2,Renovado,Terraza,100692
+Isla,74,4,Renovado,Jardín,260156
+Rural,283,3,Usado,Garaje,263992
+Centro Histórico,272,3,Nuevo,Vista al Mar,346569
+Isla,103,3,Usado,Balcón,78756
+Montaña,107,4,Usado,Garaje,58888
+Rural,116,2,Renovado,Terraza,206807
+Rural,153,2,Usado,Piscina,349439
+Isla,223,4,Renovado,Terraza,154352
+Montaña,73,3,Nuevo,Sauna,385186
+Montaña,163,3,Renovado,Jardín,125999
+Centro Histórico,81,2,Nuevo,Patio,57955
+Montaña,224,3,Renovado,Garaje,339985
+Montaña,135,1,Usado,Terraza,110640
+Montaña,200,2,Usado,Patio,236582
+Costa,243,3,Nuevo,Vista al Mar,468127
+Centro Histórico,176,2,Nuevo,Piscina,492247
+Rural,204,1,Nuevo,Jardín,259798
+Isla,283,2,Renovado,Terraza,440573
+Rural,179,2,Renovado,Patio,465695
+Centro Histórico,267,2,Nuevo,Piscina,101476
+Isla,66,2,Usado,Sauna,346955
+Centro Histórico,153,1,Renovado,Jardín,207280
+Montaña,210,4,Renovado,Jardín,191222
+Isla,186,2,Renovado,Sauna,111180
+Montaña,92,2,Nuevo,Garaje,214358
+Rural,295,3,Nuevo,Sauna,152856
+Rural,225,2,Nuevo,Jardín,370594
+Isla,88,3,Nuevo,Jardín,454568
+Isla,270,4,Nuevo,Patio,226141
+Centro Histórico,219,1,Usado,Piscina,414032
+Centro Histórico,296,1,Usado,Sauna,150448
+Montaña,75,4,Nuevo,Piscina,54397
+Isla,148,1,Renovado,Sauna,474771
+Rural,99,4,Nuevo,Vista al Mar,218031
+Centro Histórico,202,4,Usado,Jardín,433944
+Centro Histórico,201,4,Usado,Patio,483733
+Rural,62,1,Renovado,Piscina,159180
+Centro Histórico,109,3,Usado,Sauna,106234
+Montaña,299,4,Nuevo,Garage,79954
+Isla,184,2,Renovado,Vista al Mar,218352
+Rural,106,1,Nuevo,Terraza,119459
+Isla,85,4,Nuevo,Garaje,449995
+Centro Histórico,222,4,Renovado,Piscina,235004

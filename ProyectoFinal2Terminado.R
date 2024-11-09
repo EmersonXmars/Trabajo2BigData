@@ -1,0 +1,82 @@
+# Instalar y cargar librerías necesarias
+install.packages("dplyr")
+install.packages("rpart")
+install.packages("randomForest")
+install.packages("caret")
+install.packages("ROSE")
+library(dplyr)
+library(rpart)
+library(randomForest)
+library(caret)
+library(ROSE)
+
+# Cargar el archivo de bienes raíces
+transacciones <- read.csv("F:/excel/base_bienesraices.csv")
+head(transacciones)
+
+# Convertir columnas relevantes en factores
+transacciones$Estado <- as.factor(transacciones$Estado)
+transacciones$Ubicación <- as.factor(transacciones$Ubicación)
+transacciones$Características_Especiales <- as.factor(transacciones$Características_Especiales)
+
+# Crear una nueva característica: Precio por metro cuadrado
+transacciones$Precio_m2 <- transacciones$Precio_Venta / transacciones$Tamaño_m2
+
+# Dividir los datos en conjuntos de entrenamiento y prueba (70% para entrenamiento, 30% para prueba)
+set.seed(123)
+train_index <- createDataPartition(transacciones$Estado, p = 0.7, list = FALSE)
+train_data <- transacciones[train_index, ]
+test_data <- transacciones[-train_index, ]
+
+# Balanceo de clases (sobremuestreo de la clase minoritaria)
+balanced_data <- ovun.sample(Estado ~ ., data = train_data, method = "over", N = 2 * table(train_data$Estado)["Renovado"])$data
+
+# Asegurarse de que los niveles de test_data$Estado coincidan con los de train_data$Estado
+test_data$Estado <- factor(test_data$Estado, levels = levels(balanced_data$Estado))
+
+# Modelo de Árbol de Decisión con hiperparámetros ajustados y poda
+modelo_arbol <- rpart(Estado ~ Ubicación + Tamaño_m2 + Habitaciones + Características_Especiales + Precio_m2, 
+                      data = balanced_data, method = "class",
+                      control = rpart.control(cp = 0.005, minsplit = 10, maxdepth = 10))
+# Poda del árbol
+modelo_arbol <- prune(modelo_arbol, cp = 0.01)
+
+# Graficar el árbol de decisión
+plot(modelo_arbol)
+text(modelo_arbol, pretty = 1)
+
+# Realizar predicciones con el árbol de decisión y ajustar el umbral de clasificación
+prob_pred_arbol <- predict(modelo_arbol, test_data, type = "prob")
+pred_class_arbol <- ifelse(prob_pred_arbol[, "Nuevo"] > 0.6, "Nuevo", "Renovado")
+
+# Asegurarse de que los niveles de pred_class_arbol coincidan con los de test_data$Estado
+pred_class_arbol <- factor(pred_class_arbol, levels = levels(test_data$Estado))
+
+# Calcular la matriz de confusión sin advertencias
+confusionMatrix(pred_class_arbol, test_data$Estado)
+
+# Modelo de Bosque Aleatorio con hiperparámetros ajustados
+modelo_rf <- randomForest(Estado ~ Ubicación + Tamaño_m2 + Habitaciones + Características_Especiales + Precio_m2, 
+                          data = balanced_data, ntree = 200, mtry = 3, nodesize = 5)
+
+# Importancia de las variables
+importance(modelo_rf)
+varImpPlot(modelo_rf)
+
+# Realizar predicciones con el bosque aleatorio y ajustar el umbral de clasificación
+prob_pred_rf <- predict(modelo_rf, test_data, type = "prob")
+pred_class_rf <- ifelse(prob_pred_rf[, "Nuevo"] > 0.6, "Nuevo", "Renovado")
+
+# Asegurarse de que los niveles de pred_class_rf coincidan con los de test_data$Estado
+pred_class_rf <- factor(pred_class_rf, levels = levels(test_data$Estado))
+
+# Calcular la matriz de confusión sin advertencias
+confusionMatrix(pred_class_rf, test_data$Estado)
+
+# Validación Cruzada para optimizar los hiperparámetros del bosque aleatorio
+control <- trainControl(method = "cv", number = 10)
+modelo_rf_cv <- train(Estado ~ Ubicación + Tamaño_m2 + Habitaciones + Características_Especiales + Precio_m2, 
+                      data = balanced_data, method = "rf", trControl = control, tuneLength = 5)
+
+# Resultados de la validación cruzada
+print(modelo_rf_cv)
